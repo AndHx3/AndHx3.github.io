@@ -1,3 +1,5 @@
+@import "variables";
+
 #loading-bar-wrapper {
   position: absolute;
   width: 100%;
@@ -6,16 +8,14 @@
   overflow: visible;
   z-index: 999;
 }
-
 #loading-bar {
   position: relative;
   width: 0;
   height: 2px;
-  background-color: #ff9c0a;
+  background-color: rgba(lighten($brand-color, 2%), 100%);
   transition: all 0.5s ease;
-}
-@media (prefers-color-scheme: dark) {
-  #loading-bar {
-    background-color: #00a091;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: rgba(lighten($dark-mode-brand-color, 2%), 100%);
   }
 }
